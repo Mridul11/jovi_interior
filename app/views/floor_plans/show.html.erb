@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Floor plan image:</strong>
+  <img src=<%= @floor_plan.floor_plan_image %> , height="50%", width="50%"/>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @floor_plan.user.email %>
+</p>
+
+<%= link_to 'Edit', edit_floor_plan_path(@floor_plan) %> |
+<%= link_to 'Back', floor_plans_path %>
+

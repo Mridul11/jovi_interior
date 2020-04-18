@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  floor_plan_image: MyString
+  user: one
+
+two:
+  floor_plan_image: MyString
+  user: two
