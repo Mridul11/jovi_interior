@@ -33,12 +33,12 @@ function init(){
     controls.maxDistance = 1500 ;
 
     let materialArray = [];
-    let texture_ft = new THREE.TextureLoader().load('uploads/floor_plan/sonnie-hiles.jpg');
-    let texture_bk = new THREE.TextureLoader().load('uploads/floor_plan/sonnie-hiles.jpg');
+    let texture_ft = new THREE.TextureLoader().load('uploads/pics_home/front.jpeg');
+    let texture_bk = new THREE.TextureLoader().load('uploads/pics_home/back.jpeg');
+    let texture_dn = new THREE.TextureLoader().load('uploads/pics_home/top.jpeg');
     let texture_up = new THREE.TextureLoader().load('uploads/floor_plan/sonnie-hiles.jpg');
-    let texture_dn = new THREE.TextureLoader().load('uploads/floor_plan/sonnie-hiles.jpg');
-    let texture_rt = new THREE.TextureLoader().load('uploads/floor_plan/sonnie-hiles.jpg');
-    let texture_lf = new THREE.TextureLoader().load('uploads/floor_plan/sonnie-hiles.jpg');
+    let texture_rt = new THREE.TextureLoader().load('uploads/pics_home/right.jpeg');
+    let texture_lf = new THREE.TextureLoader().load('uploads/pics_home/left.jpeg');
 
     materialArray.push(new THREE.MeshBasicMaterial({ map: texture_ft }));
     materialArray.push(new THREE.MeshBasicMaterial({ map: texture_bk }));
@@ -64,13 +64,13 @@ function animate(){
     // cube.rotation.y += 0.01 ;
 }
 
-// function onWindowResize(){
-//     camera.aspect = window.innerWidth/window.innerHeight; 
-//     camera.updateProjectionMatrix();
-//     renderer.setSize(window.innerWidth, window.innerHeight);
-// }
+function onWindowResize(){
+    camera.aspect = window.innerWidth/window.innerHeight; 
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+}
 
-// window.addEventListener('resize', onWindowResize, false);
+window.addEventListener('resize', onWindowResize, false);
 
 init();
 animate();
